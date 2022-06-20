@@ -10,8 +10,9 @@ function computerPlay() {
   }
 }
 
-function playRound(playerSelection, computerSelection) {
-  let result = ""
+let result = ""
+
+function playRound(playerSelection, computerSelection) {  
   playerSelection = playerSelection.toLowerCase();
   console.log(playerSelection);
   console.log(computerSelection);
@@ -34,7 +35,28 @@ function playRound(playerSelection, computerSelection) {
   } return result;
 }
 
+function game() {
+  let playerScore = 0;
+  let computerScore = 0;
+  for (let i = 0; i < 5; i++) {
+    const playerSelection = prompt("Enter your handsign")
+    const computerSelection = computerPlay();
+    playRound(playerSelection, computerSelection)
+    if (result.includes("win")) {
+      playerScore += 1;
+    } else if (result.includes("lose")) {
+      computerScore += 1;
+    } 
+    console.log(playerScore);
+    console.log(computerScore);
+  } 
+  if (playerScore > computerScore) {
+    return "Congratulations! You have won the game"
+  } else if (playerScore < computerScore) {
+    return "You've lost the game"
+  } else {
+    return "The game has ended in a draw  "
+  }
+}
 
-const playerSelection = prompt("Enter your handsign")
-const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
+console.log(game());
