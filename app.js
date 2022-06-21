@@ -47,6 +47,7 @@ function game() {
     } else if (result.includes("lose")) {
       computerScore += 1;
     } 
+    console.log(result);
     console.log(playerScore);
     console.log(computerScore);
   } 
