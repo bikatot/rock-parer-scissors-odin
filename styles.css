@@ -1,0 +1,32 @@
+body {
+  font-family: Roboto, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  gap: 10px;
+  align-items: center;
+}
+
+#Score {
+  font-size: 24px;
+}
+
+#playerChoice,
+#playerScore {
+  color:  green;
+}
+
+#CPUChoice,
+#CPUScore {
+  color: red;
+}
+
+button {
+  padding: 8px 24px;
+  background-color: #3882f6;
+  border-radius: 5px;
+  color: #F9Faf8;
+  border: 0;
+  font-weight: 700;
+}
